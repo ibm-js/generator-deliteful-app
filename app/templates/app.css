@@ -1,0 +1,39 @@
+.pageHeader, .pageFooter{
+	background-color: #428bca;
+	color: white;
+}
+
+.pageHeader {
+	border-bottom: 2px solid #357ebd;
+	padding: 0.3em;
+}
+
+.pageFooter {
+	border-top: 2px solid #357ebd;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
+
+.pageFooter > div {
+	text-align: center;
+}
+
+/*
+button {
+	width: 32px;
+	height: 32px;
+}*/
+
+/*
+.titleStyle{
+	font-size: 1.5em;
+	text-align: center;
+	padding-top: 0.2em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+}*/
+
+.d-side-pane {
+	border-right: 1px solid #357ebd;
+}

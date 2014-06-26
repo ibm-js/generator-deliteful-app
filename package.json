@@ -1,0 +1,39 @@
+{
+	"name": "generator-delitefull-app",
+	"version": "0.0.1",
+	"description": "A deliteful application generator for Yeoman",
+	"keywords": [
+		"yeoman-generator"
+	],
+	"homepage": "https://github.com/ibm-js/generator-deliteful-app",
+	"bugs": "https://github.com/ibm-js/generator-deliteful-app/issues",
+	"main": "app/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/ibm-js/generator-deliteful-app.git"
+	},
+	"dependencies": {
+		"yeoman-generator": "~0.17",
+		"underscore.string": "2.3.x"
+	},
+	"devDependencies": {
+		"grunt-contrib-jshint": "~0.6.0",
+		"intern": "1.7",
+		"requirejs": "2.1.x",
+		"grunt": "~0.4.2",
+		"rimraf": "2.2.x",
+		"mkdirp": "0.5.x"
+	},
+	"peerDependencies": {
+		"yo": ">=1.0.0"
+	},
+	"engines": {
+		"node": ">=0.8.0",
+		"npm": ">=1.2.10"
+	},
+	"licenses": [
+		{
+			"type": "BSD"
+		}
+	]
+}
