@@ -26,7 +26,7 @@
 				<div class="fill titleStyle">Menu</div>
 			</d-linear-layout>
 			<!-- left menu content -->
-			<d-list id="list"  onselection-change="vs.show(event.item.id)" selectionMode="single">
+			<d-list id="list" on-selection-change="vs.show(event.newValue.id)" selectionMode="single">
 				<d-list-store>
 					{"label": "First View", "id": "first" },
 					{"label": "Second View", "id": "second" },
