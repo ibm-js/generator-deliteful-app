@@ -36,7 +36,7 @@ define(["intern!object", "intern/chai!assert", "intern/dojo/node!path", "intern/
 					process.chdir(dir);
 					var app;
 					try {
-						app = helpers.createGenerator("delite-element:app", ["../../app"]);
+						app = helpers.createGenerator("deliteful-app:app", ["../../app"]);
 					} catch (e) {
 						d.reject(e);
 					}
@@ -52,17 +52,15 @@ define(["intern!object", "intern/chai!assert", "intern/dojo/node!path", "intern/
 		}
 
 		registerSuite({
-			"pointer": function () {
+			"regular": function () {
 				runTest.bind(this)("temp", [
 					// add files you expect to exist here.
 					".jshintrc",
 					"bower.json",
 					"package.json",
-					"README.md",
-					"Gruntfile.js",
 					"index.html"
 				], [
-					"nothere"
+					"notthere"
 				], {
 					/* "pointer": true*/
 				});

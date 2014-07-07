@@ -3,7 +3,7 @@ define({
 		baseUrl: ".."
 	},
 	
-	suites: [ "generator-delite-element/tests/all" ],
+	suites: [ "generator-deliteful-app/tests/all" ],
 
 	useLoader: {
 		"host-node": "requirejs"
