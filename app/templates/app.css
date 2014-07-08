@@ -18,6 +18,14 @@
 	text-align: center;
 }
 
+.d-list[aria-selectable="true"] .d-list-item::before {
+	content: ''
+}
+
+.d-list[aria-selectable="true"] .d-list-item[aria-selected="true"] {
+	background-color: #428bca;
+}
+
 /*
 button {
 	width: 32px;

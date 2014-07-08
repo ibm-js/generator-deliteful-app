@@ -13,6 +13,7 @@
 						"requirejs-domready/domReady!"], function(register) {
 				register.parse();
 				document.body.style.display = "";
+				list.selectedItem = list.store.get("first");
 			});
 		</script>
 	</head>
@@ -47,13 +48,13 @@
 		<!-- stacked content -->
 		<d-view-stack id="vs" class="fill">
 			<div id="first">
-				<span>1st view</span>
+				<p>1st view</p>
 				<d-star-rating readonly value="0.5"></d-star-rating>
 			</div>
 			<div id="second">
 				<!-- fill the second view with content -->
-				<span>2nd view</span>
-				<d-progress-bar value=50 message="Uploading..."></d-progress-bar>
+				<p>2nd view</p>
+				<d-progress-bar value=50 message="Uploading..." style="width: 50%"></d-progress-bar>
 			</div>
 			<div id="third">
 				<!-- fill the third view with content -->
