@@ -27,7 +27,7 @@
 				<div class="fill titleStyle">Menu</div>
 			</d-linear-layout>
 			<!-- left menu content -->
-			<d-list id="list" on-selection-change="vs.show(event.newValue.id)" selectionMode="single">
+			<d-list id="list" on-selection-change="vs.show(event.newValue.id)" selectionMode="radio">
 				<d-list-store>
 					{"label": "First View", "id": "first" },
 					{"label": "Second View", "id": "second" },
@@ -42,7 +42,7 @@
 	<d-linear-layout class="page width100 height100">
 		<!-- page content header -->
 		<d-linear-layout vertical="false" class="pageHeader">
-			<div><button is="d-button" onclick="leftPane._visible ? leftPane.hide() : leftPane.show()"></button></div>
+			<div><button is="d-button" onclick="leftPane.toggle()"></button></div>
 			<div class="fill titleStyle">deliteful app</div>
 		</d-linear-layout>
 		<!-- stacked content -->
