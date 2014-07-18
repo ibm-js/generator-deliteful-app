@@ -4,7 +4,7 @@
 
 ## Status
 
-Latest release is 0.1.0
+Latest release is 0.1.1
 
 ## Issues
 
@@ -22,7 +22,7 @@ $ npm install -g generator-deliteful-app
 Make a new directory and cd into it:
 
 ```
-mkdir -p my-element && cd $_
+mkdir -p my-app && cd $_
 ```
 
 Finally, initiate the generator to scaffold your application and follow the instructions:
