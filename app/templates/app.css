@@ -4,6 +4,7 @@
 }
 
 .pageHeader {
+	height: 36px;
 	border-bottom: 2px solid #357ebd;
 	padding: 0.3em;
 }
@@ -18,7 +19,6 @@
 	text-align: center;
 }
 
-
 .d-list[aria-selectable="true"] .d-list-item::before {
 	content: ''
 }
@@ -27,21 +27,26 @@
 	background-color: #428bca;
 }
 
-/*
-button {
-	width: 32px;
-	height: 32px;
-}*/
+@font-face {
+	font-family: 'delitefont';
+	src: url('delitefont.eot');
+	src: url('delitefont.eot') format('embedded-opentype'),
+		url('delitefont.woff') format('woff'),
+		url('delitefont.ttf') format('truetype'),
+		url('delitefont.svg') format('svg');
+}
 
-/*
-.titleStyle{
-	font-size: 1.5em;
-	text-align: center;
-	padding-top: 0.2em;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow-x: hidden;
-}*/
+.toggle {
+	width: 24px;
+	height: 24px;
+	padding: 0;
+}
+
+.icon:before {
+	font-family: 'delitefont';
+	font-size: 14px;
+	content: "t";
+}
 
 .d-side-pane {
 	border-right: 1px solid #357ebd;

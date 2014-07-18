@@ -40,7 +40,7 @@ DelitefulAppGenerator.prototype.askFor = function askFor() {
 			name: "package",
 			message: "What is the name of your deliteful application package?",
 			default: this.appname.indexOf(" ") !== -1 ? _.slugify(this.appname) : this.appname
-		},
+		}/*,
 		{
 			type: "confirm",
 			name: "i18n",
@@ -52,7 +52,7 @@ DelitefulAppGenerator.prototype.askFor = function askFor() {
 			name: "build",
 			message: "Do you want to use build or source version of deliteful package?",
 			default: false
-		}
+		}*/
 	], function (props) {
 		this.package = props.package;
 		this.i18n = props.i18n;
@@ -66,7 +66,12 @@ DelitefulAppGenerator.prototype.generateApp = function app() {
 	this.template("_package.json", "package.json");
 	this.template("_bower.json", "bower.json");
 	this.template("_index.html", "index.html");
-	this.copy("app.css", "app.css");
+	this.copy("app.css", "css/app.css");
+	this.copy("delitefont.eot", "css/delitefont.eot");
+	this.copy("delitefont.svg", "css/delitefont.svg");
+	this.copy("delitefont.ttf", "css/delitefont.ttf");
+	this.copy("delitefont.woff", "css/delitefont.woff");
+
 
 };
 

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<link rel="stylesheet" href="app.css">
+		<link rel="stylesheet" href="css/app.css">
 		<link rel="stylesheet" href="bower_components/delite/themes/defaultapp.css">
 		<script src="bower_components/requirejs/require.js"></script>
 		<script>
@@ -42,19 +42,19 @@
 	<d-linear-layout class="page width100 height100">
 		<!-- page content header -->
 		<d-linear-layout vertical="false" class="pageHeader">
-			<div><button is="d-button" onclick="leftPane.toggle()"></button></div>
+			<div><button is="d-button" iconClass="icon" class="toggle" onclick="leftPane.toggle()"></button></div>
 			<div class="fill titleStyle">deliteful app</div>
 		</d-linear-layout>
 		<!-- stacked content -->
 		<d-view-stack id="vs" class="fill">
 			<div id="first">
 				<p>1st view</p>
-				<d-star-rating readonly value="0.5"></d-star-rating>
+				<d-star-rating value="0.5"></d-star-rating>
 			</div>
 			<div id="second">
 				<!-- fill the second view with content -->
 				<p>2nd view</p>
-				<d-progress-bar value=50 message="Uploading..." style="width: 50%"></d-progress-bar>
+				<d-progress-bar value=30 max="100" essage="Uploading..." style="width: 50%"></d-progress-bar>
 			</div>
 			<div id="third">
 				<!-- fill the third view with content -->
