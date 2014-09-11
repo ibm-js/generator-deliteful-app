@@ -2,7 +2,7 @@
 	"name": "<%= package %>",
 	"version": "0.0.1",
 	"dependencies": {
-		"deliteful": "0.1.5-dev",
+		"deliteful": "0.3.x",
 		"requirejs": "2.1.x",
 		"requirejs-domready": "2.0.x"<% if (i18n) { %>,
 		"requirejs-dplugins": "0.2.x-dev"<% } %>
