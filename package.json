@@ -13,7 +13,7 @@
 		"url": "git://github.com/ibm-js/generator-deliteful-app.git"
 	},
 	"dependencies": {
-		"yeoman-generator": "~0.17",
+		"yeoman-generator": "0.17.3",
 		"underscore.string": "2.3.x"
 	},
 	"devDependencies": {
@@ -28,7 +28,7 @@
 		"yo": ">=1.0.0"
 	},
 	"engines": {
-		"node": ">=0.8.0",
+		"node": ">=0.10.0",
 		"npm": ">=1.2.10"
 	},
 	"licenses": [
