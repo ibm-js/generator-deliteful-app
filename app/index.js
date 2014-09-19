@@ -8,11 +8,10 @@ var yeoman = require("yeoman-generator");
 var _ = require("underscore.string");
 
 
-var DelitefulAppGenerator = module.exports = function DelitefulAppGenerator(args, options, config) {
+var DelitefulAppGenerator = module.exports = function DelitefulAppGenerator(args, options) {
 	yeoman.generators.Base.apply(this, arguments);
 
 	this.on("end", function () {
-		var self = this;
 		this.installDependencies({
 			skipInstall: options["skip-install"],
 			callback: function () {
