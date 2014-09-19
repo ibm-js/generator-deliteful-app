@@ -50,7 +50,7 @@ DelitefulAppGenerator.prototype.askFor = function askFor() {
 		{
 			type: "confirm",
 			name: "build",
-			message: "Do you want to use build or source version of deliteful package?",
+			message: "Do you want to use build version of deliteful package (instead of source version)?",
 			default: true
 		}
 	], function (props) {

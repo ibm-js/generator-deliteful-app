@@ -5,6 +5,6 @@
 		"deliteful<% if (build) { %>-build<% } %>": "0.3.x",
 		"requirejs": "2.1.x"<% if (!build) { %>,
 		"requirejs-domready": "2.0.x"<% } %><% if (i18n) { %>,
-		"requirejs-dplugins<% if (build) { %>-build<% } %>": "0.2.x-dev"<% } %>
+		"requirejs-dplugins": "0.2.x-dev"<% } %>
 	}
 }
