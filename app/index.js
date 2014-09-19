@@ -40,19 +40,19 @@ DelitefulAppGenerator.prototype.askFor = function askFor() {
 			name: "package",
 			message: "What is the name of your deliteful application package?",
 			default: this.appname.indexOf(" ") !== -1 ? _.slugify(this.appname) : this.appname
-		}/*,
+		},/*
 		{
 			type: "confirm",
 			name: "i18n",
 			message: "Will your delite application require string internationalization?",
 			default: false
-		},
+		},*/
 		{
 			type: "confirm",
 			name: "build",
 			message: "Do you want to use build or source version of deliteful package?",
-			default: false
-		}*/
+			default: true
+		}
 	], function (props) {
 		this.package = props.package;
 		this.i18n = props.i18n;
