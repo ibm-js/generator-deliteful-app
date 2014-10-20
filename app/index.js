@@ -4,6 +4,7 @@
 /*jshint globalstrict: true*/
 var util = require("util");
 var path = require("path");
+var chalk = require("chalk");
 var yeoman = require("yeoman-generator");
 var _ = require("underscore.string");
 
@@ -15,8 +16,14 @@ var DelitefulAppGenerator = module.exports = function DelitefulAppGenerator(args
 		this.installDependencies({
 			skipInstall: options["skip-install"],
 			callback: function () {
-				console.log("Dependencies have been installed, point your browser to index.html to run " +
-					"the skeleton sample application");
+				if (options["skip-install"]) {
+					console.log("You should now run " + chalk.cyan("bower install") + " to install the " +
+						"dependencies. Then, point your browser to " + chalk.cyan("index.html") + " to run the " +
+						"skeleton sample application.");
+				} else {
+					console.log("Dependencies have been installed, point your browser to " + chalk.cyan("index.html") +
+						" to run the skeleton sample application.");
+				}
 			}
 		});
 	});
@@ -32,20 +39,14 @@ DelitefulAppGenerator.prototype.askFor = function askFor() {
 	// have Yeoman greet the user.
 	console.log(this.yeoman);
 
-	// TODO:  which themes?, using dapp? build or unbuilt layer?, binding
+	// TODO:  which themes?, using dapp? build or unbuilt layer?, binding, mobile meta viewport ?
 
 	this.prompt([
 		{
 			name: "package",
 			message: "What is the name of your deliteful application package?",
 			default: this.appname.indexOf(" ") !== -1 ? _.slugify(this.appname) : this.appname
-		},/*
-		{
-			type: "confirm",
-			name: "i18n",
-			message: "Will your delite application require string internationalization?",
-			default: false
-		},*/
+		},
 		{
 			type: "confirm",
 			name: "build",
@@ -65,6 +66,7 @@ DelitefulAppGenerator.prototype.generateApp = function app() {
 	this.template("_package.json", "package.json");
 	this.template("_bower.json", "bower.json");
 	this.template("_index.html", "index.html");
+	this.copy("app.js", "js/app.js");
 	this.copy("app.css", "css/app.css");
 	this.copy("delitefont.eot", "css/delitefont.eot");
 	this.copy("delitefont.svg", "css/delitefont.svg");

@@ -2,25 +2,21 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css/app.css">
-		<link rel="stylesheet" href="bower_components/delite/themes/defaultapp.css">
+		<link rel="stylesheet" href="bower_components/delite<% if (build) { %>-build<% } %>/themes/defaultapp.css">
 		<script src="bower_components/requirejs/require.js"></script>
 		<script>
 			require.config({
-				baseUrl: "bower_components"
+				baseUrl: "bower_components",
+				paths: {
+					"js": "../js"
+				}
 			});
-			<% if (build) { %>			
-			require(["deliteful-build/boot"], function() {
-			<% } %>
-				require(["delite/register", "delite/theme!delite/themes/{{theme}}/global.css", "deliteful/ViewStack",
-					"deliteful/SidePane", "deliteful/LinearLayout", "deliteful/Button", "deliteful/StarRating",
-					"deliteful/ProgressBar", "deliteful/list/List", "requirejs-domready/domReady!"], function (register) {
-					register.parse();
-					document.body.style.display = "";
-					list.selectedItem = list.store.get("first");
-				});
-			<% if (build) { %>
-			});
-			<% } %>
+<% if (build) { %>
+			// Load the minified layer.
+			require(["deliteful-build/layer"], function() {
+	<% } %>			// Start the application.
+<% if (build) { %>	<% } %>			require(["js/app"]);<% if (build) { %>
+			});<% } %>
 		</script>
 	</head>
 	<body style="display: none">
@@ -54,6 +50,7 @@
 		<!-- stacked content -->
 		<d-view-stack id="vs" class="fill">
 			<div id="first">
+				<!-- fill the first view with content -->
 				<p>1st view</p>
 				<d-star-rating value="0.5"></d-star-rating>
 			</div>
