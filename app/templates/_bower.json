@@ -2,7 +2,7 @@
 	"name": "<%= package %>",
 	"version": "0.0.1",
 	"dependencies": {
-		"deliteful<% if (build) { %>-build<% } %>": "0.4.x",
+		"deliteful<% if (build) { %>-build<% } %>": "0.5.x",
 		"requirejs": "2.1.x"<% if (!build) { %>,
 		"requirejs-domready": "2.0.x"<% } %>
 	}
