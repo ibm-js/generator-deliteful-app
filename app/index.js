@@ -68,12 +68,6 @@ DelitefulAppGenerator.prototype.generateApp = function app() {
 	this.template("_index.html", "index.html");
 	this.copy("app.js", "js/app.js");
 	this.copy("app.css", "css/app.css");
-	this.copy("delitefont.eot", "css/delitefont.eot");
-	this.copy("delitefont.svg", "css/delitefont.svg");
-	this.copy("delitefont.ttf", "css/delitefont.ttf");
-	this.copy("delitefont.woff", "css/delitefont.woff");
-
-
 };
 
 DelitefulAppGenerator.prototype.projectfiles = function projectfiles() {
