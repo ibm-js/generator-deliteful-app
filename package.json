@@ -1,6 +1,6 @@
 {
 	"name": "generator-deliteful-app",
-	"version": "0.2.3",
+	"version": "0.3.0",
 	"description": "A deliteful application generator for Yeoman",
 	"keywords": [
 		"yeoman-generator"
