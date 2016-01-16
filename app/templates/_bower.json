@@ -5,6 +5,7 @@
 		"deliteful<% if (build) { %>-build<% } %>": "0.7.x",
 		"Font-Awesome": "4.3.x",
 		"requirejs": "2.1.x"<% if (!build) { %>,
-		"requirejs-domready": "2.0.x"<% } %>
+		"requirejs-domready": "2.0.x"<% } %>,
+		"dojo": "~1.10.4"
 	}
 }
